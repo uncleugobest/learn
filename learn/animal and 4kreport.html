@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>4K News</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <style type="text/css">    
+  </style>
+  <main>
+    <header>
+      <h1> Contoso News: </h1>
+      <h2> On Time, On Topic:</h2> 
+    </header>
+    <h3> International Story</h3>
+    <article>
+      <time datetime="16-01-2016" id="time"> Friday, Jan 16 
+      </time>
+      <h4> Latest Articles <img src="ideas.jpg"  width="80" height="80">    </h4>
+      <p> Curabitur pharetra luctus augue,non   posuere orci tristique vel. Sed
+        posuere nisi nec lacus ullamcorper, ac vulputate nisl consequat. Nullam 
+        sollicitudin nulla vel felis faucibus aliquam. Nunc sit amet velit orci.
+        Proin sed orci fringilla, elementum felis condimentum, convallis augue.
+        Aliquam erat volutpat. Mauris tempus nunc sit amet aliquet bibendum. 
+        Praesent vestibulum cursus ex, quis laoreet eros consectetur ac. 
+        Ut congue libero quis mauris egestas feugiat. Sed pharetra lorem et magna fringilla,
+        a volutpat nibh sollicitudin. Nullam sagittis sollicitudin urna,
+        sed sollicitudin mauris ornare id.
+        <a href="http://4kreport.com" target="_blank" style="text-decoration: none;">   read more...  
+        </a> 
+      </p>
+    </article>
+    
+    <article> 
+      <time datetime="14-01-2016" id="time">
+        Wednesday, Jan 14
+      </time>
+      <h4>  Finance Story </h4>
+      <p>  Nullam tempor mi at libero elementum varius. Sed lobortis lacus feugiat est tristique, nec imperdiet turpis scelerisque. Ut sed urna malesuada, scelerisque dui sit amet, tempus mauris. Integer bibendum egestas urna, a bibendum sem gravida quis. Cras accumsan rhoncus vestibulum. Nam eu blandit leo. Integer at consectetur nunc, et tempus urna. Integer sit amet sollicitudin elit. Donec nec posuere erat. Sed vestibulum nisl neque, vitae tincidunt ex molestie quis. Nulla fringilla viverra turpis in volutpat. Cras vel orci quis velit efficitur ullamcorper sed eu ex.<br> 
+        <figure> 
+          <img src="/home/erumaka/Desktop/Oluaka projects/images/debit.png" alt="Debit Card with Chip"> 
+          <figcaption>  New Debit Cards with Chip-Based Security. 
+          </figcaption>
+        </figure> Nullam vel ex nec lectus imperdiet luctus vitae vel nibh. Donec eleifend velit eros, eu efficitur justo molestie id. In egestas gravida lectus. Ut ipsum odio, suscipit sit amet molestie non, scelerisque sed mi. Aenean sed augue eu arcu faucibus molestie. Sed eget ante gravida, rhoncus velit eu, tempus quam. Sed fermentum at odio sed commodo. Fusce lobortis cursus purus, quis consequat est faucibus at. Etiam massa felis, sodales at sodales sed, iaculis quis arcu. 
+        <a href="http://4kreport.com" target="_blank"> read more...  
+        </a>  
+      </p>
+    </article>
+    <article>
+      <time datetime="14-01-2016"> 
+        Wednesday, Jan 14
+       </time>
+      <h4>Technology Story</h4>
+      <p >
+        Morbi eget justo ut velit dapibus malesuada. Nunc elementum, neque quis convallis tempus, lacus ante tristique est, id porta tortor leo eget orci. Suspendisse hendrerit interdum lacus et condimentum. Mauris at ex dignissim, bibendum libero at, fermentum lectus. Maecenas porttitor purus quis augue interdum, eget malesuada neque placerat. Ut hendrerit risus in nibh elementum, quis vestibulum ipsum vulputate. Nulla facilisi. In consectetur et lacus vel tincidunt. Quisque feugiat ipsum et erat rhoncus efficitur. In in augue at enim tempor sollicitudin.
+        <a href="http://4kreport.com" target="_blank"> read more...  
+        </a> 
+      </p>
+    </article>
+  </main>
+  <form name="formss" id="formss" 
+	method="post" action="">
+  <input type="number" id="nums"  name="nums" placeholder="Enter Your Number"><span id="span_one" class="spans" > </span>
+  <input type="email" id="emails" name="emails" placeholder="Enter your Emails"><span id="span_two" class="spans" > </span>
+  <input type="text"  id="zip"  name="zip" placeholder="Postal Adress"> <span id="span_three" class="spans" > </span>
+  <input type="button" name="save" id="save" value="save" onclick="run()"> 
+	
+</form>
+<script type="text/javascript">
+  function run(){
+    var nums, emails,zip;
+    nums=document.getElementById('nums').value;
+    emails=document.getElementById('emails').value;
+    var atpos = emails.indexOf("@");
+    var dotpos = emails.indexOf(".");
+    zip=document.getElementById('zip').value;
+    if( nums.length < 11 || nums.value == String){
+      
+      document.getElementById('span_one').innerHTML='Error in Your Number';
+      
+    }
+    if( zip < 6 || zip == String  ) {
+      document.getElementById('span_two').innerHTML='Error in Your posta Adress';
+      
+    }
+    if ( atpos < 1  || dotpos < 1 ) {
+      document.getElementById('span_three').innerHTML="Wrong email make sure you have an @"
+    }
+    else{
+      var animalList = ['Lion','Tiger','leopard','Snake'];
+      var prompter = prompt(" What types of Animals do you think we have stored behind the scenes ");
+      
+      if (prompter!=""){
+        if ( prompter==animalList[0]){
+          alert("You Got it That Animal Was saved Here")
+        } else if( prompter==animalList[1] )
+        {
+          alert("You Got it That Animal Was saved Here")
+        }
+        else if ( prompter == animalList[2] ) {
+          alert(" You Got it That Animal Was saved Here ")
+        }
+        else if ( prompter == animalList[3] || prompter == animalList[3].toUpperCase() ) {
+          alert(" You Got it That Animal Was saved Here ")
+        }
+        else{
+          alert("it is not available")
+        }
+      }
+      else{
+        alert('wrong input');
+      }      
+    }
+    
+  }
+  
+</script>
+
+</body>
+</html>
